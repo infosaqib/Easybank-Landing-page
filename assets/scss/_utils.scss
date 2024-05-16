@@ -37,13 +37,13 @@ button {
 **/
 
 h1 {
-  font-size: clamp(1em, 2.2em, 3.4em);
+  font-size: clamp(1em, 2em, 3.4em);
   font-weight: 300;
   width: 9em;
   color: $Dark-Blue;
 }
 h2 {
-  font-size: clamp(1.8em, 2.1em, 2.6em);
+  font-size: clamp(1.8em, 1.9em, 2.6em);
   font-weight: 400;
   color: $Dark-Blue;
 }
