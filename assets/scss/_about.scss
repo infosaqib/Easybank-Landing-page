@@ -1,0 +1,88 @@
+@use "utils" as *;
+
+#about {
+  background-color: $Light-Grayish-Blue;
+  .ab-title {
+    padding: 5em 0 0 5em;
+    h2,
+    h4 {
+      margin: 20px;
+    }
+
+    h4 {
+      line-height: 2vw;
+      color: $Grayish-Blue;
+      font-weight: 400;
+      font-size: 1.2em;
+    }
+  }
+  .ab-cards-coll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 3em 5em;
+    .ab-card {
+      padding: 25px 22px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        height: 100%;
+        width: 4.5rem;
+      }
+      h3 {
+        line-height: 2vw;
+        color: $Dark-Blue;
+        font-weight: 400;
+        font-size: 1.5em;
+      }
+      p {
+        line-height: 2vw;
+        color: $Grayish-Blue;
+        font-weight: 500;
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  #about {
+    .ab-title {
+      padding: 3em 0;
+      h2,
+      h4 {
+        text-align: center;
+        margin: 25px;
+      }
+      h4 {
+        line-height: 6vw;
+        font-size: 0.95em;
+        br{
+          display: none;
+        }
+      }
+    }
+    .ab-cards-coll{
+      flex-direction: column;
+      padding: 0 1em 3em;
+      .ab-card{
+        align-items: center;
+        h3{
+          font-size: 1.3em;
+        }
+        p{
+          line-height: 6vw;
+          text-align: center;
+          font-size: 0.95em;
+br{
+  display: none;
+}
+        }
+      }
+    }
+  }
+}

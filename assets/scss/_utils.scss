@@ -1,0 +1,52 @@
+/**
+* ! Colors
+**/
+// Primary
+
+$Dark-Blue: hsl(233, 26%, 24%);
+$Lime-Green: hsl(136, 65%, 51%);
+$Bright-Cyan: hsl(192, 70%, 51%);
+
+// Neutral
+
+$Grayish-Blue: hsl(233, 8%, 62%);
+$Light-Grayish-Blue: hsl(220, 16%, 96%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+
+/**
+* ? Style Rules
+**/
+button {
+  padding: 15px 33px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+  color: $White;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+/**
+* ! Font Rules
+**/
+
+h1 {
+  font-size: clamp(1em, 2.2em, 3.4em);
+  font-weight: 300;
+  width: 9em;
+  color: $Dark-Blue;
+}
+h2 {
+  font-size: clamp(1.8em, 2.1em, 2.6em);
+  font-weight: 400;
+  color: $Dark-Blue;
+}
+h3 {
+  font-size: clamp(0.5em, 0.87em, 1.2em) ;
+}

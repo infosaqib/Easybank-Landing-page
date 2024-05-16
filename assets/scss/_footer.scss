@@ -1,0 +1,91 @@
+@use "utils" as *;
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: $Dark-Blue;
+  padding: 3rem 10px;
+  .ft-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    .logo {
+      svg {
+        width: 10em;
+      }
+    }
+    .ft-icons {
+      margin: 5px;
+      svg {
+        margin-inline: 5px;
+        width: 1.25em;
+        cursor: pointer;
+        path {
+          transition: all ease 0.4s;
+        }
+
+        &:hover path {
+          fill: $Lime-Green;
+        }
+      }
+    }
+  }
+}
+.ft-mid {
+  ul {
+    grid-template-columns: repeat(2, auto);
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    li {
+      list-style: none;
+      text-decoration: none;
+      color: $White;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 10px 4em;
+      cursor: pointer;
+      transition: all ease 0.4s;
+      &:hover {
+        color: $Lime-Green;
+      }
+    }
+  }
+}
+.ft-right {
+  button {
+    margin: 25px;
+  }
+  p {
+    color: $Grayish-Blue;
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 375px) {
+  footer {
+    flex-direction: column;
+    gap: 1em;
+    .ft-mid {
+      ul {
+        grid-template-columns: repeat(1, auto);
+        justify-items: center;
+        li {
+          text-align: center;
+        }
+      }
+    }
+    .ft-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+

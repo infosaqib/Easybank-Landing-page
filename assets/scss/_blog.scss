@@ -1,0 +1,84 @@
+@use "utils" as *;
+
+#blog {
+  background-color: $Very-Light-Gray;
+  padding-inline: 6em;
+  padding-block: 6em 2em;
+  .bg-cards-coll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5rem 0;
+    gap: 2em;
+    .bg-card {
+      border-radius: 5px;
+      background-color: $White;
+      box-shadow: 18px 0px 87px 0px rgba(10, 15, 70, .07);
+      img {
+        width: 17em;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      .bg-card-details {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        h6 {
+          color: $Grayish-Blue;
+          font-size: 0.6em;
+        }
+        h5 {
+          color: $Dark-Blue;
+          font-weight: 500;
+          font-size: 1.15em;
+          line-height: 1.5vw;
+          cursor: pointer;
+          &:hover {
+            color: $Lime-Green;
+          }
+        }
+        p {
+          line-height: 1.3vw;
+          color: $Grayish-Blue;
+          font-weight: 500;
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  #blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0;
+    h2 {
+      font-size: 2.1em;
+      text-align: center;
+      width: max-content;
+    }
+    .bg-cards-coll {
+      flex-direction: column;
+      padding: 4em 0;
+      .bg-card {
+        .bg-card-details {
+          h5 {
+            font-size: 1em;
+          }
+          h5,
+          p {
+            line-height: 6vw;
+          }
+        }
+      }
+    }
+  }
+}
